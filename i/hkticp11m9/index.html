@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="10 月 5 日周一 18:00，Surry Hills 的 Porteño，一起吃晚饭。">
+<meta property="og:title" content="10 月 5 日 · Porteño 晚餐邀请">
+<meta property="og:description" content="周一 18:00，悉尼 Surry Hills，一起吃晚饭。">
+<meta name="theme-color" content="#f5efe6">
+<title>Porteño 晚餐邀请</title>
+<style>
+:root{
+  --bg:#f5efe6; --card:#fffdf9; --ink:#2a2420; --ink2:#6f655c; --line:#e7ddd0;
+  --accent:#a8431f; --accent-ink:#ffffff; --soft:#f3e7da;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16130f; --card:#211c17; --ink:#f1e9df; --ink2:#b3a697; --line:#3a3129;
+    --accent:#e0703f; --accent-ink:#1a120c; --soft:#2c241d;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16130f; --card:#211c17; --ink:#f1e9df; --ink2:#b3a697; --line:#3a3129;
+  --accent:#e0703f; --accent-ink:#1a120c; --soft:#2c241d;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0 auto;max-width:520px;background:var(--bg);color:var(--ink);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Noto Sans SC","Microsoft YaHei",sans-serif;
+  padding:28px 16px calc(40px + env(safe-area-inset-bottom))}
+a{color:var(--accent);text-decoration:none}
+.kicker{font-size:12px;letter-spacing:.28em;color:var(--ink2);text-transform:uppercase;margin:0 0 10px}
+h1{font-size:30px;line-height:1.25;margin:0 0 6px;font-weight:700;letter-spacing:.02em}
+.lead{color:var(--ink2);margin:0 0 22px;font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:14px;
+  box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(60,35,15,.06)}
+.venue{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:4px}
+.venue h2{margin:0;font-size:26px;letter-spacing:.06em;font-weight:800}
+.venue span{font-size:13px;color:var(--ink2);white-space:nowrap}
+.tag{color:var(--ink2);font-size:14px;margin:0 0 16px}
+.when{background:var(--soft);border-radius:14px;padding:14px 16px;margin-bottom:16px}
+.when .d{font-size:20px;font-weight:700}
+.when .t{font-size:15px;color:var(--ink2);margin-top:2px}
+.cd{font-size:13px;color:var(--accent);margin-top:8px;font-variant-numeric:tabular-nums}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 14px;font-size:15px}
+dt{color:var(--ink2);white-space:nowrap}
+dd{margin:0;word-break:break-word}
+.map{border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/11;background:var(--soft);margin-bottom:12px}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;border-radius:12px;font-size:15px;font-weight:600;
+  background:var(--accent);color:var(--accent-ink);border:0;cursor:pointer;font-family:inherit}
+.btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.btn.full{grid-column:1/-1}
+.card h3{margin:0 0 10px;font-size:16px}
+ul{margin:0;padding-left:20px}
+li{margin:6px 0;font-size:15px}
+.toast{position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);
+  padding:10px 16px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+footer{text-align:center;color:var(--ink2);font-size:14px;margin-top:22px}
+</style>
+</head>
+<body>
+
+<p class="kicker">Dinner Invitation · 晚餐邀请</p>
+<h1>10 月 5 日周一<br>一起吃晚饭吧</h1>
+<p class="lead">我们到悉尼的第一晚，订了 Surry Hills 的阿根廷炭火烤肉，等你们来。</p>
+
+<section class="card">
+  <div class="venue"><h2>PORTEÑO</h2><span>Surry Hills</span></div>
+  <p class="tag">阿根廷炭火烤肉 · 干式熟成牛排</p>
+  <div class="when">
+    <div class="d">2026 年 10 月 5 日 周一</div>
+    <div class="t">18:00 入座（悉尼时间），桌位到 20:15</div>
+    <div class="cd" id="cd"></div>
+  </div>
+  <dl>
+    <dt>人数</dt><dd>4 位</dd>
+    <dt>订位名</dt><dd>Ben Li</dd>
+    <dt>地址</dt><dd>50 Holt St, Surry Hills NSW 2010</dd>
+    <dt>餐厅电话</dt><dd><a href="tel:+61283991440">+61 2 8399 1440</a></dd>
+  </dl>
+</section>
+
+<section class="card">
+  <div class="map">
+    <iframe title="Porteño 位置" loading="lazy"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=151.2045%2C-33.8880%2C151.2140%2C-33.8830&amp;layer=mapnik&amp;marker=-33.88640%2C151.20950"></iframe>
+  </div>
+  <div class="btns">
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Porte%C3%B1o%2C%2050%20Holt%20St%2C%20Surry%20Hills%20NSW%202010">Google 地图</a>
+    <a class="btn ghost" href="https://maps.apple.com/?q=Porte%C3%B1o&amp;ll=-33.88640,151.20950&amp;address=50%20Holt%20St%2C%20Surry%20Hills%20NSW%202010">Apple 地图</a>
+    <button class="btn ghost full" type="button" id="copy">复制地址</button>
+  </div>
+</section>
+
+<section class="card">
+  <h3>怎么过来</h3>
+  <ul>
+    <li>坐火车到 Central 站，出站步行约 8 分钟。</li>
+    <li>打车或 Uber 直接报地址：50 Holt Street, Surry Hills。</li>
+    <li>当天是新州公共假期，路上车少，但餐厅会比较满，尽量准时。</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h3>小提示</h3>
+  <ul>
+    <li>先到的话报订位名 Ben Li 就能入座。</li>
+    <li>有忌口或不吃的东西，提前告诉我们，好帮大家点菜。</li>
+  </ul>
+</section>
+
+<footer>期待见面 🍷</footer>
+<div class="toast" id="toast">地址已复制</div>
+
+<script>
+(function(){
+  // 目标：2026-10-05 18:00 悉尼 AEDT（UTC+11），即 UTC 07:00
+  var TARGET = Date.UTC(2026, 9, 5, 7, 0, 0);
+  var el = document.getElementById('cd');
+  function tick(){
+    var ms = TARGET - Date.now();
+    if (ms <= 0) { el.textContent = ms > -8100000 ? '正在进行中，快来！' : '谢谢你们来 ❤️'; return; }
+    var m = Math.floor(ms / 60000), d = Math.floor(m / 1440), h = Math.floor(m % 1440 / 60), mi = m % 60;
+    el.textContent = '距离开饭还有 ' + (d ? d + ' 天 ' : '') + h + ' 小时 ' + mi + ' 分';
+  }
+  tick(); setInterval(tick, 30000);
+
+  var ADDR = '50 Holt St, Surry Hills NSW 2010';
+  var toast = document.getElementById('toast');
+  function show(msg){ toast.textContent = msg; toast.classList.add('on'); setTimeout(function(){ toast.classList.remove('on'); }, 1600); }
+  function fallback(){
+    var ta = document.createElement('textarea'); ta.value = ADDR; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta); show(ok ? '地址已复制' : '请长按地址手动复制');
+  }
+  document.getElementById('copy').addEventListener('click', function(){
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(ADDR).then(function(){ show('地址已复制'); }, fallback);
+    } else { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
